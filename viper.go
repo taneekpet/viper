@@ -40,15 +40,15 @@ import (
 	"github.com/spf13/cast"
 	"github.com/spf13/pflag"
 
-	"github.com/spf13/viper/internal/encoding"
-	"github.com/spf13/viper/internal/encoding/dotenv"
-	"github.com/spf13/viper/internal/encoding/hcl"
-	"github.com/spf13/viper/internal/encoding/ini"
-	"github.com/spf13/viper/internal/encoding/javaproperties"
-	"github.com/spf13/viper/internal/encoding/json"
-	"github.com/spf13/viper/internal/encoding/toml"
-	"github.com/spf13/viper/internal/encoding/yaml"
-	"github.com/spf13/viper/internal/features"
+	"github.com/taneekpet/viper/internal/encoding"
+	"github.com/taneekpet/viper/internal/encoding/dotenv"
+	"github.com/taneekpet/viper/internal/encoding/hcl"
+	"github.com/taneekpet/viper/internal/encoding/ini"
+	"github.com/taneekpet/viper/internal/encoding/javaproperties"
+	"github.com/taneekpet/viper/internal/encoding/json"
+	"github.com/taneekpet/viper/internal/encoding/toml"
+	"github.com/taneekpet/viper/internal/encoding/yaml"
+	"github.com/taneekpet/viper/internal/features"
 )
 
 // ConfigMarshalError happens when failing to marshal the configuration.
@@ -1973,7 +1973,7 @@ func (v *Viper) WatchRemoteConfigOnChannel() error {
 // Retrieve the first found remote configuration.
 func (v *Viper) getKeyValueConfig() error {
 	if RemoteConfig == nil {
-		return RemoteConfigError("Enable the remote features by doing a blank import of the viper/remote package: '_ github.com/spf13/viper/remote'")
+		return RemoteConfigError("Enable the remote features by doing a blank import of the viper/remote package: '_ github.com/taneekpet/viper/remote'")
 	}
 
 	if len(v.remoteProviders) == 0 {

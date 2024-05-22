@@ -12,9 +12,9 @@ import (
 	"os"
 	"strings"
 
-	crypt "github.com/sagikazarmark/crypt/config"
+	crypt "github.com/taneekpet/crypt/config"
 
-	"github.com/spf13/viper"
+	"github.com/taneekpet/viper"
 )
 
 type remoteConfigProvider struct{}
